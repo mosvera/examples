@@ -16,10 +16,14 @@ per example.
 ## Aesthetic Pack Gallery
 
 [`packs/`](./packs/) is the canonical source for the public `mosvera.io`
-pack gallery. It contains 25 portable `.mosvera.json` aesthetic packs,
+pack gallery. It contains 26 portable `.mosvera.json` aesthetic packs,
 gallery metadata, and WebP thumbnail previews. The packs carry registry
 documents only; thumbnails are gallery assets and are not embedded in the
 pack files.
+
+`mosvera-public` is the canonical public-site aesthetic and default gallery
+mode. The other packs remain exchange examples that users can preview, import,
+resolve, and compile inside their own local registries.
 
 The website mirrors this gallery data into its static deploy bundle so every
 pack can be downloaded, previewed, imported into a local registry, and used to
@@ -73,7 +77,8 @@ ships.
 
 Phase 5 examples are present with generated image artifacts and deterministic
 payload metadata for all three reference image adapters. Phase 6N adds the
-25-pack aesthetic gallery consumed by `mosvera.io`.
+large aesthetic gallery consumed by `mosvera.io`; Phase 6S adds the canonical
+`mosvera-public` site aesthetic.
 
 ## License
 

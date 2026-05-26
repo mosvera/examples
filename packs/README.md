@@ -11,6 +11,7 @@ embed assets, credentials, provider manifests, remote URLs, or zip contents.
 
 ## Packs
 
+- [Mosvera Public](./mosvera-public.mosvera.json) - The canonical Mosvera public-site aesthetic: warm, technical, open, and quietly distinctive.
 - [Quiet Editorial](./quiet-editorial.mosvera.json) - A calm public-standard home: readable, measured, and institutional without feeling sterile.
 - [Technical Manual](./technical-manual.mosvera.json) - Dense, precise, and engineered for scanning: a spec bench rather than a campaign page.
 - [Cinematic Lab](./cinematic-lab.mosvera.json) - High-contrast, image-forward, and expressive while keeping the schema surface legible.
@@ -52,9 +53,9 @@ Use Mosvera to resolve claymation-playful-builder and compile it into CSS variab
 
 Pack JSON and gallery metadata are generated from
 [`scripts/generate-pack-gallery.mjs`](../scripts/generate-pack-gallery.mjs).
-Thumbnail assets are generated separately through Forge and committed as
-optimized WebP files. The generator has a `--placeholder-assets` fallback for
-local visual scaffolding, but do not use that flag for the public gallery.
+Thumbnail assets are generated separately and committed as optimized WebP
+files. The generator has a `--placeholder-assets` fallback for local visual
+scaffolding, but do not use that flag for the public gallery.
 
 ```sh
 node scripts/generate-pack-gallery.mjs

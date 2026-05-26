@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const providers = ["openai", "flux", "sdxl"];
-const packCount = 25;
+const packCount = 26;
 const hex = /^#[0-9a-f]{6}$/;
 
 function pngSize(path) {
@@ -88,7 +88,7 @@ assert(existsSync(galleryPath), "missing packs/gallery.json");
 
 const gallery = readJson(galleryPath);
 assert(gallery.version === "0.1.0", "gallery version must be 0.1.0");
-assert(gallery.default === "quiet-editorial", "gallery default must be quiet-editorial");
+assert(gallery.default === "mosvera-public", "gallery default must be mosvera-public");
 assert(gallery.count === packCount, `gallery count must be ${packCount}`);
 assert(Array.isArray(gallery.aesthetics), "gallery aesthetics must be an array");
 assert(gallery.aesthetics.length === packCount, `gallery must include ${packCount} aesthetics`);

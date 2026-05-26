@@ -24,6 +24,23 @@ const fontSets = {
 
 const packs = [
   {
+    id: "mosvera-public",
+    label: "Mosvera Public",
+    summary: "The canonical Mosvera public-site aesthetic: warm, technical, open, and quietly distinctive.",
+    category: "Canonical brand",
+    palette: ["#f5efe4", "#fffaf2", "#e7dccb", "#201a14", "#62584d", "#bd5838", "#2f7f73", "#cdbda8", "#15110d", "#f7ead9"],
+    typography: "editorial",
+    layout: ["comfortable", "7px", "0 20px 62px rgba(54, 37, 23, 0.17)", "1180px"],
+    motion: ["measured", "230ms"],
+    treatment: "brand_tessera",
+    voice: [
+      "Canonical Mosvera public aesthetic",
+      "Aesthetic infrastructure you can bring into your own tools.",
+      "Mosvera turns named aesthetic intent into portable packs, local registries, design tokens, CSS variables, and provider payloads without a hosted runtime dependency.",
+    ],
+    art: "brand",
+  },
+  {
     id: "quiet-editorial",
     label: "Quiet Editorial",
     summary: "A calm public-standard home: readable, measured, and institutional without feeling sterile.",
@@ -539,6 +556,7 @@ function shapeSet(entry, index) {
   }).join("");
 
   const map = {
+    brand: `${tiles}${grid}${circles}`,
     paper: `${tiles}${dots}`,
     schematic: `${grid}${bars}`,
     spotlight: `${rays}${circles}`,
@@ -635,9 +653,9 @@ Use Mosvera to resolve claymation-playful-builder and compile it into CSS variab
 
 Pack JSON and gallery metadata are generated from
 [\`scripts/generate-pack-gallery.mjs\`](../scripts/generate-pack-gallery.mjs).
-Thumbnail assets are generated separately through Forge and committed as
-optimized WebP files. The generator has a \`--placeholder-assets\` fallback for
-local visual scaffolding, but do not use that flag for the public gallery.
+Thumbnail assets are generated separately and committed as optimized WebP
+files. The generator has a \`--placeholder-assets\` fallback for local visual
+scaffolding, but do not use that flag for the public gallery.
 
 \`\`\`sh
 node scripts/generate-pack-gallery.mjs
@@ -653,7 +671,7 @@ function main() {
   }
   const gallery = {
     version: "0.1.0",
-    default: "quiet-editorial",
+    default: "mosvera-public",
     count: packs.length,
     aesthetics: packs.map(galleryEntry),
   };
