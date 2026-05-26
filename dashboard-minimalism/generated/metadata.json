@@ -1,0 +1,162 @@
+{
+  "source_composition": "https://github.com/mosvera/spec/blob/main/examples/dashboard-minimalism/composition.json",
+  "generated_at": "2026-05-25T22:21:45Z",
+  "note": "Deterministic emission metadata plus generated Phase 5 gallery images.",
+  "openai": {
+    "provider": "openai-gpt-image-1",
+    "image": {
+      "file": "openai.png",
+      "media_type": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2206603
+    },
+    "payload": {
+      "model": "gpt-image-1",
+      "moderation": "auto",
+      "n": 1,
+      "output_format": "png",
+      "prompt": "a dense but clean data visualization dashboard showing quarterly revenue trends, digital illustration style, neutral lighting, flat lighting setup, medium contrast, muted saturation, accent color (#8ab4f8)",
+      "quality": "medium",
+      "size": "1536x1024"
+    },
+    "warnings": [
+      {
+        "construct": "color_grade.contrast",
+        "action": "approximate"
+      },
+      {
+        "construct": "color_grade.saturation",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.mood",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.scheme",
+        "action": "approximate"
+      },
+      {
+        "construct": "medium",
+        "action": "approximate"
+      },
+      {
+        "construct": "palette.accent",
+        "action": "approximate"
+      },
+      {
+        "construct": "safety",
+        "action": "approximate"
+      }
+    ]
+  },
+  "flux": {
+    "provider": "bfl-flux-2-pro",
+    "transport": "replicate",
+    "replicate_model": "black-forest-labs/flux-2-pro",
+    "replicate_prediction_id": "azetn1rxg5rmw0cyc4xtg4cntw",
+    "image": {
+      "file": "flux.png",
+      "media_type": "image/png",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1063149
+    },
+    "payload": {
+      "height": 864,
+      "output_format": "png",
+      "prompt": "a dense but clean data visualization dashboard showing quarterly revenue trends, digital illustration style, neutral lighting, flat lighting setup, medium contrast, muted saturation, accent color (#8ab4f8)",
+      "safety_tolerance": 2,
+      "width": 1536
+    },
+    "warnings": [
+      {
+        "construct": "color_grade.contrast",
+        "action": "approximate"
+      },
+      {
+        "construct": "color_grade.saturation",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.mood",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.scheme",
+        "action": "approximate"
+      },
+      {
+        "construct": "medium",
+        "action": "approximate"
+      },
+      {
+        "construct": "palette.accent",
+        "action": "approximate"
+      },
+      {
+        "construct": "quality",
+        "action": "unsupported"
+      }
+    ]
+  },
+  "sdxl": {
+    "provider": "sdxl-replicate",
+    "replicate_model": "stability-ai/sdxl:2a865c9a94c9992b6689365b75db2d678d5022505ed3f63a5f53929a31a46947",
+    "image": {
+      "file": "sdxl.png",
+      "media_type": "image/png",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1248883
+    },
+    "payload": {
+      "guidance_scale": 7.5,
+      "height": 864,
+      "high_noise_frac": 0.8,
+      "negative_prompt": "ugly, blurry, low quality, distorted, disfigured",
+      "num_inference_steps": 35,
+      "num_outputs": 1,
+      "output_format": "png",
+      "prompt": "a dense but clean data visualization dashboard showing quarterly revenue trends, digital illustration style, neutral lighting, flat lighting setup, medium contrast, muted saturation, accent color (#8ab4f8)",
+      "refine": "expert_ensemble_refiner",
+      "scheduler": "K_EULER",
+      "width": 1536
+    },
+    "warnings": [
+      {
+        "construct": "color_grade.contrast",
+        "action": "approximate"
+      },
+      {
+        "construct": "color_grade.saturation",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.mood",
+        "action": "approximate"
+      },
+      {
+        "construct": "lighting.scheme",
+        "action": "approximate"
+      },
+      {
+        "construct": "medium",
+        "action": "approximate"
+      },
+      {
+        "construct": "palette.accent",
+        "action": "approximate"
+      },
+      {
+        "construct": "quality",
+        "action": "approximate"
+      },
+      {
+        "construct": "safety",
+        "action": "unsupported"
+      }
+    ]
+  }
+}
