@@ -12,6 +12,7 @@ embed assets, credentials, provider manifests, remote URLs, or zip contents.
 ## Packs
 
 - [Mosvera Public](./mosvera-public.mosvera.json) - The canonical Mosvera public-site aesthetic: warm, technical, open, and quietly distinctive.
+- [Mosvera Public Dark](./mosvera-public-dark.mosvera.json) - The canonical Mosvera public aesthetic tuned for low-light work: ink, warmth, and legible technical depth.
 - [Quiet Editorial](./quiet-editorial.mosvera.json) - A calm public-standard home: readable, measured, and institutional without feeling sterile.
 - [Technical Manual](./technical-manual.mosvera.json) - Dense, precise, and engineered for scanning: a spec bench rather than a campaign page.
 - [Cinematic Lab](./cinematic-lab.mosvera.json) - High-contrast, image-forward, and expressive while keeping the schema surface legible.

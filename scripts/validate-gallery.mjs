@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const providers = ["openai", "flux", "sdxl"];
-const packCount = 26;
+const packCount = 27;
 const hex = /^#[0-9a-f]{6}$/;
 
 function pngSize(path) {

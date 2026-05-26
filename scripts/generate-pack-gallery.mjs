@@ -41,6 +41,23 @@ const packs = [
     art: "brand",
   },
   {
+    id: "mosvera-public-dark",
+    label: "Mosvera Public Dark",
+    summary: "The canonical Mosvera public aesthetic tuned for low-light work: ink, warmth, and legible technical depth.",
+    category: "Canonical brand",
+    palette: ["#14110e", "#201a15", "#2b241d", "#f6efe3", "#c5b8a7", "#d66a43", "#4db3a3", "#4b3d31", "#0c0907", "#f9e6c8"],
+    typography: "editorial",
+    layout: ["comfortable", "7px", "0 22px 70px rgba(0, 0, 0, 0.38)", "1180px"],
+    motion: ["measured", "230ms"],
+    treatment: "dark_brand_tessera",
+    voice: [
+      "Canonical Mosvera dark aesthetic",
+      "The same public system, tuned for low-light work.",
+      "Mosvera Public Dark keeps the named aesthetic, local registry, pack exchange, and token story intact while shifting the surface into warm ink, rust, teal, and high-contrast code panels.",
+    ],
+    art: "brand",
+  },
+  {
     id: "quiet-editorial",
     label: "Quiet Editorial",
     summary: "A calm public-standard home: readable, measured, and institutional without feeling sterile.",
