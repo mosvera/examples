@@ -13,6 +13,18 @@ where the abstraction becomes legible: schemas + composition + at
 least two providers + comparable rendered outputs, all in one place
 per example.
 
+## Aesthetic Pack Gallery
+
+[`packs/`](./packs/) is the canonical source for the public `mosvera.io`
+pack gallery. It contains 25 portable `.mosvera.json` aesthetic packs,
+gallery metadata, and WebP thumbnail previews. The packs carry registry
+documents only; thumbnails are gallery assets and are not embedded in the
+pack files.
+
+The website mirrors this gallery data into its static deploy bundle so every
+pack can be downloaded, previewed, imported into a local registry, and used to
+re-theme the live demonstrator.
+
 ## Conventions
 
 Each example is a self-contained directory:
@@ -60,7 +72,8 @@ ships.
 ## Status
 
 Phase 5 examples are present with generated image artifacts and deterministic
-payload metadata for all three reference image adapters.
+payload metadata for all three reference image adapters. Phase 6N adds the
+25-pack aesthetic gallery consumed by `mosvera.io`.
 
 ## License
 
@@ -74,5 +87,6 @@ output license).
 ## Validation
 
 ```sh
+node scripts/generate-pack-gallery.mjs
 node scripts/validate-gallery.mjs
 ```
