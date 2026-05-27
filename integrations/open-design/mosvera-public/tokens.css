@@ -1,0 +1,130 @@
+/* SPDX-License-Identifier: Apache-2.0
+ *
+ * Open Design token projection for Mosvera Public.
+ *
+ * Generated from:
+ * - source/mosvera-public.mosvera.json
+ * - source/mosvera-public-dark.mosvera.json
+ *
+ * Open Design agents should copy these token blocks rather than inventing
+ * raw hex values. Mosvera remains the source aesthetic-pack format; this file
+ * maps the canonical Mosvera pair into Open Design's expected token names.
+ */
+
+:root {
+  --bg: #f5efe4;
+  --surface: #fffaf2;
+  --surface-warm: #e7dccb;
+  --fg: #201a14;
+  --fg-2: #201a14;
+  --muted: #62584d;
+  --meta: #62584d;
+  --border: #cdbda8;
+  --border-soft: #e7dccb;
+  --accent: #bd5838;
+  --accent-on: #fffaf2;
+  --accent-hover: color-mix(in oklab, var(--accent), black 8%);
+  --accent-active: color-mix(in oklab, var(--accent), black 14%);
+  --success: #2f7f73;
+  --warn: #d99a2b;
+  --danger: #c94a3a;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+  --leading-body: 1.5;
+  --leading-tight: 1.05;
+  --tracking-display: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --section-y-desktop: 96px;
+  --section-y-tablet: 64px;
+  --section-y-phone: 40px;
+  --radius-sm: 7px;
+  --radius-md: 7px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --elev-flat: none;
+  --elev-raised: 0 20px 62px rgba(54, 37, 23, 0.17);
+  --elev-ring: 0 0 0 2px color-mix(in oklab, var(--accent), transparent 64%);
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent), transparent 68%);
+  --motion-fast: 150ms;
+  --motion-base: 230ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --container-max: 1180px;
+  --container-gutter-desktop: 48px;
+  --container-gutter-tablet: 32px;
+  --container-gutter-phone: 16px;
+}
+
+[data-theme="dark"] {
+  --bg: #14110e;
+  --surface: #201a15;
+  --surface-warm: #2b241d;
+  --fg: #f6efe3;
+  --fg-2: #f6efe3;
+  --muted: #c5b8a7;
+  --meta: #c5b8a7;
+  --border: #4b3d31;
+  --border-soft: #2b241d;
+  --accent: #d66a43;
+  --accent-on: #14110e;
+  --accent-hover: color-mix(in oklab, var(--accent), white 8%);
+  --accent-active: color-mix(in oklab, var(--accent), white 14%);
+  --success: #4db3a3;
+  --warn: #d99a2b;
+  --danger: #c94a3a;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+  --leading-body: 1.5;
+  --leading-tight: 1.05;
+  --tracking-display: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --section-y-desktop: 96px;
+  --section-y-tablet: 64px;
+  --section-y-phone: 40px;
+  --radius-sm: 7px;
+  --radius-md: 7px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --elev-flat: none;
+  --elev-raised: 0 22px 70px rgba(0, 0, 0, 0.38);
+  --elev-ring: 0 0 0 2px color-mix(in oklab, var(--accent), transparent 64%);
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent), transparent 68%);
+  --motion-fast: 150ms;
+  --motion-base: 230ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --container-max: 1180px;
+  --container-gutter-desktop: 48px;
+  --container-gutter-tablet: 32px;
+  --container-gutter-phone: 16px;
+}

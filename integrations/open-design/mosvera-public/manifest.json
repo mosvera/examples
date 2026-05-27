@@ -1,0 +1,16 @@
+{
+  "category": "Developer Tools",
+  "description": "A warm technical editorial design system generated from Mosvera aesthetic packs.",
+  "files": {
+    "components": "components.html",
+    "design": "DESIGN.md",
+    "tokens": "tokens.css"
+  },
+  "id": "mosvera-public",
+  "name": "Mosvera Public",
+  "schemaVersion": "od-design-system-project/v1",
+  "source": {
+    "origin": "Mosvera aesthetic packs",
+    "type": "bundled"
+  }
+}

@@ -24,3 +24,6 @@ jobs:
 
       - name: Validate gallery
         run: node scripts/validate-gallery.mjs
+
+      - name: Verify Open Design export
+        run: node scripts/export-open-design-system.mjs --check

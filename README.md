@@ -30,6 +30,14 @@ The website mirrors this gallery data into its static deploy bundle so every
 pack can be downloaded, previewed, imported into a local registry, and used to
 re-theme the live demonstrator.
 
+## Open Design Compatibility
+
+[`integrations/open-design/mosvera-public/`](./integrations/open-design/mosvera-public/)
+is a generated Open Design design-system project built from the canonical
+`mosvera-public` and `mosvera-public-dark` packs. It is intended for upstream
+submission as a single design-system folder: no Mosvera runtime dependency, no
+MCP wiring, and no provider execution.
+
 ## Conventions
 
 Each example is a self-contained directory:
@@ -94,5 +102,6 @@ output license).
 
 ```sh
 node scripts/generate-pack-gallery.mjs
+node scripts/export-open-design-system.mjs
 node scripts/validate-gallery.mjs
 ```

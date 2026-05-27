@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mosvera Public Components</title>
+    <style>
+:root {
+  --bg: #f5efe4;
+  --surface: #fffaf2;
+  --surface-warm: #e7dccb;
+  --fg: #201a14;
+  --fg-2: #201a14;
+  --muted: #62584d;
+  --meta: #62584d;
+  --border: #cdbda8;
+  --border-soft: #e7dccb;
+  --accent: #bd5838;
+  --accent-on: #fffaf2;
+  --accent-hover: color-mix(in oklab, var(--accent), black 8%);
+  --accent-active: color-mix(in oklab, var(--accent), black 14%);
+  --success: #2f7f73;
+  --warn: #d99a2b;
+  --danger: #c94a3a;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+  --leading-body: 1.5;
+  --leading-tight: 1.05;
+  --tracking-display: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --section-y-desktop: 96px;
+  --section-y-tablet: 64px;
+  --section-y-phone: 40px;
+  --radius-sm: 7px;
+  --radius-md: 7px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --elev-flat: none;
+  --elev-raised: 0 20px 62px rgba(54, 37, 23, 0.17);
+  --elev-ring: 0 0 0 2px color-mix(in oklab, var(--accent), transparent 64%);
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent), transparent 68%);
+  --motion-fast: 150ms;
+  --motion-base: 230ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --container-max: 1180px;
+  --container-gutter-desktop: 48px;
+  --container-gutter-tablet: 32px;
+  --container-gutter-phone: 16px;
+}
+
+[data-theme="dark"] {
+  --bg: #14110e;
+  --surface: #201a15;
+  --surface-warm: #2b241d;
+  --fg: #f6efe3;
+  --fg-2: #f6efe3;
+  --muted: #c5b8a7;
+  --meta: #c5b8a7;
+  --border: #4b3d31;
+  --border-soft: #2b241d;
+  --accent: #d66a43;
+  --accent-on: #14110e;
+  --accent-hover: color-mix(in oklab, var(--accent), white 8%);
+  --accent-active: color-mix(in oklab, var(--accent), white 14%);
+  --success: #4db3a3;
+  --warn: #d99a2b;
+  --danger: #c94a3a;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+  --leading-body: 1.5;
+  --leading-tight: 1.05;
+  --tracking-display: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --section-y-desktop: 96px;
+  --section-y-tablet: 64px;
+  --section-y-phone: 40px;
+  --radius-sm: 7px;
+  --radius-md: 7px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --elev-flat: none;
+  --elev-raised: 0 22px 70px rgba(0, 0, 0, 0.38);
+  --elev-ring: 0 0 0 2px color-mix(in oklab, var(--accent), transparent 64%);
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent), transparent 68%);
+  --motion-fast: 150ms;
+  --motion-base: 230ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --container-max: 1180px;
+  --container-gutter-desktop: 48px;
+  --container-gutter-tablet: 32px;
+  --container-gutter-phone: 16px;
+}
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-body);
+        line-height: var(--leading-body);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+      }
+
+      .container {
+        width: min(var(--container-max), calc(100% - (var(--container-gutter-phone) * 2)));
+        margin-inline: auto;
+        padding-block: var(--section-y-phone);
+      }
+
+      section,
+      .stack-3,
+      .stack-4,
+      .stack-6 {
+        display: grid;
+      }
+
+      section {
+        gap: var(--space-8);
+      }
+
+      .stack-3 {
+        gap: var(--space-3);
+      }
+
+      .stack-4 {
+        gap: var(--space-4);
+      }
+
+      .stack-6 {
+        gap: var(--space-6);
+      }
+
+      .row-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: var(--font-display);
+        line-height: var(--leading-tight);
+      }
+
+      h1 {
+        max-width: 12ch;
+        font-size: var(--text-4xl);
+      }
+
+      h2 {
+        font-size: var(--text-3xl);
+      }
+
+      h3 {
+        font-size: var(--text-xl);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .lead {
+        max-width: 66ch;
+        color: var(--muted);
+        font-size: var(--text-lg);
+      }
+
+      .eyebrow,
+      .body-sm,
+      .body-muted,
+      .badge,
+      kbd {
+        font-size: var(--text-sm);
+      }
+
+      .eyebrow,
+      .badge,
+      kbd {
+        font-family: var(--font-mono);
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .body-muted {
+        color: var(--muted);
+      }
+
+      .card {
+        display: grid;
+        gap: var(--space-4);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: var(--space-6);
+        background: var(--surface);
+        box-shadow: var(--elev-raised);
+      }
+
+      .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: var(--space-3) var(--space-5);
+        background: var(--surface);
+        color: var(--fg);
+        font: 650 var(--text-base) var(--font-body);
+        text-decoration: none;
+        transition: transform var(--motion-fast) var(--ease-standard);
+      }
+
+      .btn-primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: var(--accent-on);
+      }
+
+      .btn-secondary {
+        background: transparent;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-1px);
+      }
+
+      .btn:focus-visible,
+      input:focus-visible {
+        outline: none;
+        outline-offset: 3px;
+        box-shadow: var(--focus-ring);
+      }
+
+      .field {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      label {
+        color: var(--muted);
+        font-size: var(--text-sm);
+        font-weight: 650;
+      }
+
+      input {
+        min-height: 44px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: var(--space-3) var(--space-4);
+        background: var(--surface);
+        color: var(--fg);
+        font: inherit;
+      }
+
+      .badge {
+        width: fit-content;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-pill);
+        padding: var(--space-1) var(--space-3);
+        background: var(--surface-warm);
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+
+      kbd {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 2px 6px;
+        background: var(--surface-warm);
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        display: inline-grid;
+        place-items: center;
+        border-radius: var(--radius-sm);
+        background: var(--accent);
+        color: var(--accent-on);
+      }
+
+      .artifact-panel {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: var(--space-4);
+        background: var(--surface-warm);
+        color: var(--fg-2);
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+        overflow: auto;
+      }
+
+      @media (min-width: 760px) {
+        .container {
+          width: min(var(--container-max), calc(100% - (var(--container-gutter-tablet) * 2)));
+          padding-block: var(--section-y-desktop);
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .container {
+          width: min(var(--container-max), calc(100% - (var(--container-gutter-desktop) * 2)));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section>
+        <div class="stack-4">
+          <p class="eyebrow">Mosvera Public</p>
+          <h1>Aesthetic infrastructure for local tools.</h1>
+          <p class="lead">
+            A warm technical editorial system generated from Mosvera aesthetic
+            packs and projected into Open Design tokens.
+          </p>
+          <div class="row-between">
+            <a class="btn btn-primary" href="#">Import pack</a>
+            <a class="btn btn-secondary" href="#">View source</a>
+          </div>
+        </div>
+
+        <article class="card">
+          <div class="row-between">
+            <span class="badge">Local registry</span>
+            <span class="icon" aria-hidden="true">M</span>
+          </div>
+          <div class="stack-3">
+            <h2>Composition document</h2>
+            <p class="body-muted">
+              Resolve a named aesthetic, compile tokens, and keep the runtime
+              inside the user's own toolchain.
+            </p>
+            <p class="body-sm">
+              Press <kbd>Cmd</kbd> <kbd>K</kbd> to switch tasks in the host app.
+            </p>
+          </div>
+          <div class="field">
+            <label for="pack-id">Pack id</label>
+            <input id="pack-id" value="mosvera-public" />
+          </div>
+          <pre class="artifact-panel"><code>--bg: var(--bg);
+--surface: var(--surface);
+--accent: var(--accent);</code></pre>
+          <a href="#">Download .mosvera.json</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
