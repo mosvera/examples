@@ -37,7 +37,7 @@ function packTemplate(pack) {
 }
 
 function cssString(value) {
-  return String(value).replace(/"/g, '\\"');
+  return String(value).replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n");
 }
 
 function cssBlock(selector, template, { dark = false } = {}) {
